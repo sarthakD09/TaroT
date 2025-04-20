@@ -78,7 +78,7 @@ function drawNewCards() {
             // Set card image
             const cardImageName = card.name.replace(/ /g, '-');
             const cardArt = slot.querySelector('.card-art');
-            cardArt.style.backgroundImage = `url('Cards-png/${card.number}-${cardImageName}.png')`;
+            cardArt.style.backgroundImage = `url('./${card.number}-${cardImageName}.png')`;
             
             // Add classes for styling
             if (isReversed) {
@@ -146,7 +146,7 @@ function initMeaningsPage() {
         const cardItem = document.createElement('div');
         cardItem.className = 'card-list-item';
         cardItem.innerHTML = `
-            <img src="cards/${card.number}-${card.name.replace(/ /g, '-')}.png" alt="${card.name}">
+            <img src="./${card.number}-${card.name.replace(/ /g, '-')}.png" alt="${card.name}">
             <p>${card.name}</p>
         `;
         cardItem.addEventListener('click', () => showCardDetail(card));
@@ -167,7 +167,7 @@ function initHistoryPage() {
             <div class="reading-spread">${reading.spread}</div>
             <div class="reading-cards">
                 ${reading.cards.map(card => `
-                    <div class="mini-card" style="background-image: url('cards/${card.number}-${card.name.replace(/ /g, '-')}.jpg')"></div>
+                    <div class="mini-card" style="background-image: url('./${card.number}-${card.name.replace(/ /g, '-')}.jpg')"></div>
                 `).join('')}
             </div>
             <button class="view-reading">View</button>
