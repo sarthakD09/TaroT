@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Tarot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg-overlay"></div>
+    <div class="bg-image"></div>
+
+    <!-- Navigation -->
+    <header>
+        <h1><span class="gold-text">Ancient</span> Arcana</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="readings.html">Readings</a></li>
+                <li><a href="meanings.html">Meanings</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="meanings-page">
+        <section class="card-search">
+            <input type="text" id="searchCards" placeholder="Search cards...">
+            <label for="filterSuit">Filter by Suit:</label>
+            <select id="filterSuit">
+                <option value="all">All Cards</option>
+                <option value="major">Major Arcana</option>
+                <option value="wands">Wands</option>
+                <option value="cups">Cups</option>
+                <option value="swords">Swords</option>
+                <option value="pentacles">Pentacles</option>
+            </select>
+        </section>
+    
+        <section class="card-meanings">
+            <div class="card-list" id="cardList">
+                <!-- Cards will populate here -->
+                    <img src="Cards-png/00-The-Fool.png" alt="">
+                    <img src="Cards-png/01-The-Magician.png" alt="">
+                    <img src="Cards-png/02-The-High-Priestess.png" alt="">
+                    <img src="Cards-png/03-The-Empress.png" alt="">
+                    <img src="Cards-png/04-The-Emperor.png" alt="">
+                    <img src="Cards-png/05-The-Hierophant.png" alt="">
+                    <img src="Cards-png/06-TheLovers.png" alt="">
+                    <img src="Cards-png/07-TheChariot.png" alt="">
+                    <img src="Cards-png/08-Strength.png" alt="">
+                    <img src="Cards-png/09-TheHermit.png" alt="">
+                    <img src="Cards-png/10-WheelOfFortune.png" alt="">
+                    <img src="Cards-png/11-Justice.png" alt="">
+                    <img src="Cards-png/12-TheHangedMan.png" alt="">
+                    <img src="Cards-png/13-Death.png" alt="">
+                    <img src="Cards-png/14-Temperance.png" alt="">
+                    <img src="Cards-png/15-TheDevil.png" alt="">
+                    <img src="Cards-png/16-TheTower.png" alt="">
+                    <img src="Cards-p ng/17-TheStar.png" alt="">
+                    <img src="Cards-png/18-TheMoon.png" alt="">
+                    <img src="Cards-png/19-TheSun.png" alt="">
+                    <img src="Cards-png/20-Judgement.png" alt="">
+                    <img src="Cards-png/21-TheWorld.png" alt="">
+            </div>
+            <div class="card-detail" id="cardDetail">
+                <h3>Select a card to view details</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Ancient Arcana. All rights reserved.</p>
+    </footer>
+    <script src="solution.js"></script>
+</body>
+</html>

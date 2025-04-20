@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Tarot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Placeholder -->
+    <div class="bg-overlay"></div>
+    <div class="bg-image"></div>
+
+    <!-- Header -->
+    <header>
+        <h1><span class="gold-text">Ancient</span> Arcana</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="readings.html">Readings</a></li>
+                <li><a href="meanings.html">Meanings</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Unveil the Secrets of the Ancients</h2>
+            <p>Draw three cards for past, present, and future.</p>
+            <button id="drawButton">Draw Cards</button>
+        </div>
+    </section>
+
+    <!-- Tarot Canvas - 3 Cards -->
+    <section class="tarot-canvas">
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card-slot" id="card1">
+                <div class="card">
+                    <div class="card-back"></div>
+                    <div class="card-front">
+                        <h4 class="card-name">Card Name</h4>
+                        <div class="card-art"></div>
+                    </div>
+                </div>
+                <p class="card-label">Past</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card-slot" id="card2">
+                <div class="card">
+                    <div class="card-back"></div>
+                    <div class="card-front">
+                        <h4 class="card-name">Card Name</h4>
+                        <div class="card-art"></div>
+                    </div>
+                </div>
+                <p class="card-label">Present</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card-slot" id="card3">
+                <div class="card">
+                    <div class="card-back"></div>
+                    <div class="card-front">
+                        <h4 class="card-name">Card Name</h4>
+                        <div class="card-art"></div>
+                    </div>
+                </div>
+                <p class="card-label">Future</p>
+            </div>
+        </div>
+
+        <!-- Interpretation -->
+        <div class="interpretation">
+            <h3>Your Reading</h3>
+            <div id="cardMeaning">
+                <p><strong>Past:</strong> Draw a card to begin...</p>
+                <p><strong>Present:</strong> </p>
+                <p><strong>Future:</strong> </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Ancient Arcana. All rights reserved.</p>
+    </footer>
+
+    <script src="solution.js"></script>
+</body>
+</html>

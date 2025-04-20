@@ -1,0 +1,347 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'MedievalSharp', cursive;
+    color: #e0d6c2;
+    overflow-x: hidden;
+
+/* Background Placeholder */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('axp-photography-9m2bAV8rY3M-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -2;
+    opacity: 0.7;
+}
+
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(20, 15, 10, 0.85), rgba(5, 2, 0, 0.9));
+    z-index: -1;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(10, 8, 5, 0.7);
+    border-bottom: 1px solid #5d4a30;
+}
+
+h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.gold-text {
+    color: #d4af37;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: #e0d6c2;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    background: #5d4a30;
+    color: #e0d6c2;
+    border: 2px solid #d4af37;
+    padding: 0.8rem 2rem;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #d4af37;
+    color: #1a1a1a;
+}
+
+/* Tarot Canvas */
+.tarot-canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 60vh;
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.card-slot {
+    width: 200px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card-back {
+    width: 100%;
+    height: 100%;
+    background: url('cardback.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-back:hover {
+    transform: rotateY(10deg) scale(1.05);
+}
+
+.interpretation {
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(30, 25, 20, 0.8);
+    border: 1px solid #5d4a30;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.interpretation h3 {
+    color: #d4af37;
+    font-size: 1.8rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(10, 8, 5, 0.7);
+    border-top: 1px solid #5d4a30;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+}
+/* Add these new styles to your existing CSS */
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.card-slot {
+    width: 200px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+    text-align: center;
+}
+.card-label {
+    color: #d4af37;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: none; /* Hide the card label by default */
+}
+}
+
+/* Show the card label when the card is flipped and reversed */
+.card.flipped.reversed + .card-label {
+    display: block;
+}
+
+/* Card Flip Animation */
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+    
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-back, .card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-back {
+    background: url('cardback.jpeg') no-repeat center center;
+    background-size: cover;
+}
+
+.card-front {
+    background: #2a2118, url('your-card-front-design.png') no-repeat center center;
+    background-size: contain;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 2px solid #5d4a30;
+}
+
+.card-name {
+    color: #d4af37;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.card-art {
+    width: 100%;
+    height: 100%;
+    background: url('your-card-front-design.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-container {
+        gap: 1rem;
+    }
+    .card-slot {
+        width: 150px;
+        height: 280px;
+    }
+}
+/* Add to style.css */
+.card.reversed {
+    transform: rotateY(180deg) rotate(180deg);
+}
+
+.card-meaning {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #e0d6c2;
+    display: none;
+}
+
+
+/* Shared Styles */
+/* Removed duplicate styles */
+
+/* Readings Page */
+.spread-selection {
+    text-align: center;
+    padding: 2rem;
+}
+
+.spreads {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.spread-option {
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 200px;
+}
+
+.spread-option:hover {
+    transform: scale(1.05);
+}
+
+/* Meanings Page */
+.card-meanings {
+    display: block;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    width: 90%;
+}
+
+.card-list {
+    display: block;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 3rem;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.card-list-item {
+    cursor: pointer;
+    border: 1px solid #5d4a30;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* History Page */
+.saved-reading {
+    background: rgba(30, 25, 20, 0.8);
+    border: 1px solid #5d4a30;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 120px 150px 1fr 100px 100px;
+    align-items: center;
+}
+
+.mini-card {
+    width: 50px;
+    height: 80px;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 5px;
+}
+.active {
+    font-weight: bold;
+}
+

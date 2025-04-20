@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Tarot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg-overlay"></div>
+    <div class="bg-image"></div>
+
+    <!-- Navigation -->
+    <header>
+        <h1><span class="gold-text">Ancient</span> Arcana</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="readings.html">Readings</a></li>
+                <li><a href="meanings.html">Meanings</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="history-page">
+        <h2>Your Saved Readings</h2>
+        <div class="reading-history" id="readingHistory">
+            <!-- Example saved reading -->
+            <div class="saved-reading">
+                <div class="reading-date">April 20, 2024</div>
+                <div class="reading-spread">Past, Present, Future</div>
+                <div class="reading-cards">
+                    <div class="mini-card" style="background-image: url('cardback.jpeg')"></div>
+                    <div class="mini-card" style="background-image: url('cardback.jpeg')"></div>
+                    <div class="mini-card" style="background-image: url('cardback.jpeg')"></div>
+                </div>
+                <button class="view-reading">View</button>
+                <button class="delete-reading">Delete</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Ancient Arcana. All rights reserved.</p>
+    </footer>
+    <script src="solution.js"></script>
+</body>
+</html>

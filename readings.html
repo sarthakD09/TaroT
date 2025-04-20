@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Tarot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background -->
+    <div class="bg-overlay"></div>
+    <div class="bg-image"></div>
+
+    <!-- Navigation -->
+    <header>
+        <h1><span class="gold-text">Ancient</span> Arcana</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="readings.html">Readings</a></li>
+                <li><a href="meanings.html">Meanings</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="readings-page">
+        <section class="spread-selection">
+            <h2>Choose Your Spread</h2>
+            <div class="spreads">
+                <div class="spread-option" data-spread="past-present-future">
+                    <img src="images/3-card-spread.png" alt="Three Card Spread">
+                    <h3>Past, Present, Future</h3>
+                </div>
+                <div class="spread-option" data-spread="celtic-cross">
+                    <img src="images/celtic-cross.png" alt="Celtic Cross">
+                    <h3>Celtic Cross</h3>
+                </div>
+            </div>
+        </section>
+    
+        <section class="reading-canvas">
+            <div class="card-container" id="cardContainer">
+                <!-- Cards will appear here dynamically -->
+            </div>
+            <button id="drawButton">Begin Reading</button>
+        </section>
+    
+        <section class="interpretation">
+            <h3>Your Reading</h3>
+            <div id="readingInterpretation"></div>
+            <button id="saveReading">Save to History</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Ancient Arcana. All rights reserved.</p>
+    </footer>
+    <script src="solution.js"></script>
+</body>
+</html>
